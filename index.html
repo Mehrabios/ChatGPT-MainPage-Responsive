@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT, the world's most powerful chatbot</title>
+  <link rel="stylesheet" href="./Styles/bootstrap.css">
+  <link rel="stylesheet" href="./Styles/style.css">
+<head>
+<body>
+  <!--Header-->
+  <header class="bg-light-subtle d-flex flex-row justify-content-around align-items-center position-sticky top-0 shadow-lg py-2 z-1">
+    <div class="header-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="currentColor" class="text-light-emphasis" viewBox="0 0 1180 320"><path d="m367.44 153.84c0 52.32 33.6 88.8 80.16 88.8s80.16-36.48 80.16-88.8-33.6-88.8-80.16-88.8-80.16 36.48-80.16 88.8zm129.6 0c0 37.44-20.4 61.68-49.44 61.68s-49.44-24.24-49.44-61.68 20.4-61.68 49.44-61.68 49.44 24.24 49.44 61.68z"/><path d="m614.27 242.64c35.28 0 55.44-29.76 55.44-65.52s-20.16-65.52-55.44-65.52c-16.32 0-28.32 6.48-36.24 15.84v-13.44h-28.8v169.2h28.8v-56.4c7.92 9.36 19.92 15.84 36.24 15.84zm-36.96-69.12c0-23.76 13.44-36.72 31.2-36.72 20.88 0 32.16 16.32 32.16 40.32s-11.28 40.32-32.16 40.32c-17.76 0-31.2-13.2-31.2-36.48z"/><path d="m747.65 242.64c25.2 0 45.12-13.2 54-35.28l-24.72-9.36c-3.84 12.96-15.12 20.16-29.28 20.16-18.48 0-31.44-13.2-33.6-34.8h88.32v-9.6c0-34.56-19.44-62.16-55.92-62.16s-60 28.56-60 65.52c0 38.88 25.2 65.52 61.2 65.52zm-1.44-106.8c18.24 0 26.88 12 27.12 25.92h-57.84c4.32-17.04 15.84-25.92 30.72-25.92z"/><path d="m823.98 240h28.8v-73.92c0-18 13.2-27.6 26.16-27.6 15.84 0 22.08 11.28 22.08 26.88v74.64h28.8v-83.04c0-27.12-15.84-45.36-42.24-45.36-16.32 0-27.6 7.44-34.8 15.84v-13.44h-28.8z"/><path d="m1014.17 67.68-65.28 172.32h30.48l14.64-39.36h74.4l14.88 39.36h30.96l-65.28-172.32zm16.8 34.08 27.36 72h-54.24z"/><path d="m1163.69 68.18h-30.72v172.32h30.72z"/><path d="m297.06 130.97c7.26-21.79 4.76-45.66-6.85-65.48-17.46-30.4-52.56-46.04-86.84-38.68-15.25-17.18-37.16-26.95-60.13-26.81-35.04-.08-66.13 22.48-76.91 55.82-22.51 4.61-41.94 18.7-53.31 38.67-17.59 30.32-13.58 68.54 9.92 94.54-7.26 21.79-4.76 45.66 6.85 65.48 17.46 30.4 52.56 46.04 86.84 38.68 15.24 17.18 37.16 26.95 60.13 26.8 35.06.09 66.16-22.49 76.94-55.86 22.51-4.61 41.94-18.7 53.31-38.67 17.57-30.32 13.55-68.51-9.94-94.51zm-120.28 168.11c-14.03.02-27.62-4.89-38.39-13.88.49-.26 1.34-.73 1.89-1.07l63.72-36.8c3.26-1.85 5.26-5.32 5.24-9.07v-89.83l26.93 15.55c.29.14.48.42.52.74v74.39c-.04 33.08-26.83 59.9-59.91 59.97zm-128.84-55.03c-7.03-12.14-9.56-26.37-7.15-40.18.47.28 1.3.79 1.89 1.13l63.72 36.8c3.23 1.89 7.23 1.89 10.47 0l77.79-44.92v31.1c.02.32-.13.63-.38.83l-64.41 37.19c-28.69 16.52-65.33 6.7-81.92-21.95zm-16.77-139.09c7-12.16 18.05-21.46 31.21-26.29 0 .55-.03 1.52-.03 2.2v73.61c-.02 3.74 1.98 7.21 5.23 9.06l77.79 44.91-26.93 15.55c-.27.18-.61.21-.91.08l-64.42-37.22c-28.63-16.58-38.45-53.21-21.95-81.89zm221.26 51.49-77.79-44.92 26.93-15.54c.27-.18.61-.21.91-.08l64.42 37.19c28.68 16.57 38.51 53.26 21.94 81.94-7.01 12.14-18.05 21.44-31.2 26.28v-75.81c.03-3.74-1.96-7.2-5.2-9.06zm26.8-40.34c-.47-.29-1.3-.79-1.89-1.13l-63.72-36.8c-3.23-1.89-7.23-1.89-10.47 0l-77.79 44.92v-31.1c-.02-.32.13-.63.38-.83l64.41-37.16c28.69-16.55 65.37-6.7 81.91 22 6.99 12.12 9.52 26.31 7.15 40.1zm-168.51 55.43-26.94-15.55c-.29-.14-.48-.42-.52-.74v-74.39c.02-33.12 26.89-59.96 60.01-59.94 14.01 0 27.57 4.92 38.34 13.88-.49.26-1.33.73-1.89 1.07l-63.72 36.8c-3.26 1.85-5.26 5.31-5.24 9.06l-.04 89.79zm14.63-31.54 34.65-20.01 34.65 20v40.01l-34.65 20-34.65-20z"/></svg>
+    </div>
+    <nav class="d-none d-lg-inline">
+      <ul class="m-0 p-0">
+        <li class="d-inline p-2 list-item"><a href="#">Home</a></li>
+        <li class="d-inline p-2 list-item"><a href="#">Try ChatGPT</a></li>
+        <li class="d-inline p-2 list-item"><a href="#">Buy GPT-4</a></li>
+        <li class="d-inline p-2 list-item"><a href="#">Use API</a></li>
+        <li class="d-inline p-2 list-item"><a href="#">Contact Us</a></li>
+        <li class="d-inline p-2 list-item"><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav-icon d-inline-block d-lg-none">
+      <button class="btn btn-outline-secondary border border-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/></svg>
+      </button>
+    </div>
+  </header>
+  <!--Header End-->
+  <main>
+    <div class="alert mx-auto alert-success alert-dismissible text-center fade show mb-0" role="alert" id="free-alert">
+      <h2 class="alert-heading">Try GPT-4 free for 24 Hours!</h2>
+      <p class="mb-0">You can use GPT-4 for <strong>Free</strong> only now! Be faster , you only have <strong>24 Hours</strong>!</p>
+      <button type="button" class="btn-close z-0" data-bs-dismiss="#free-alert"></button>
+    </div>
+
+    <!--Hero-->
+    <div class="hero bg-dark w-100 d-flex flex-row justify-content-around align-items-center">
+      <div class="hero-text">
+        <div class="title">
+          <h2 class="text-title fw-bolder">Realize the power of chatbots with GPT4</h2>
+        </div><hr>
+        <div class="paragraph">
+          <p class="text">More creative responses, the ability to understand complex images and the ability to behave like a human are some of the great features of GPT4.</p>
+        </div>
+      </div>
+      <div class="hero-img h-100 d-none d-lg-block">
+        <img class="w-100 h-100" src="./Image/striped purple.jpg" alt="">
+      </div>
+    </div>
+    <!--Hero End-->
+
+    <!--whyUse-->
+    <div class="why-use px-4 w-100 bg-light-subtle d-flex flex-column w-100 align-items-center flex-wrap">
+      <div class="title">
+        <h2 class="text-center m-5">Using ChatGPT Reason's</h2>
+      </div>
+      <div class="cards d-flex flex-row justify-content-around flex-wrap">
+        <div class="card mt-5 rounded flex-grow-1 shadow text-center py-3 px-4">
+          <div class="title-why"><h2 class="mb-3">Because it is <strong><span class="fast">fast</span></strong></h2></div>
+          <div class="text-paragraph">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ea qui doloremque eveniet numquam consequatur voluptas architecto ipsum?</p>
+          </div>
+        </div>
+        <div class="card mt-5 rounded flex-grow-1 shadow text-center py-3 px-4">
+          <div class="title-why"><h2 class="mb-3">Because it is <strong><span class="use">useful</span></strong></h2></div>
+          <div class="text-paragraph">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident ea qui doloremque eveniet numquam consequatur voluptas architecto ipsum?</p>
+          </div>
+        </div>
+        <div class="card mb-5 rounded flex-grow-1 shadow text-center py-3 px-4">
+          <div class="title-why"><h2 class="mb-3">Because it is <strong><span class="easy">easy to access</span></strong></h2></div>
+          <div class="text-paragraph">
+            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit debitis reprehenderit itaque pariatur nostrum quia accusamus quisquam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--whyUse End-->
+
+    <!--DevMode-->
+    <div class="devmode-slide d-flex flex-row justify-content-around align-items-center flex-wrap px-5 bg-dark">
+      <div class="code-cmd flex-grow-1 rounded p-4">
+        <code>Import OS<br>Import Pytorch<br>def(cls):<br>OS.system("cls")<br>first_number = 12<br>sec_number = 23<br>print(first_number + sec_number)</code>
+      </div>
+      <div class="devmode-text flex-grow-1 w-50">
+        <div class="dev-title mb-4"><h2 class="text-light fw-bolder">Better answers with developer mode</h2></div>
+        <div class="dev-paragraph"><p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sit, blanditiis, hic facilis ea assumenda voluptatibus cupiditate officiis necessitatibus quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+        <div class="btn btn-outline-success btn-lg shadow">Enable ChatGPT Developer mode</div>
+      </div>
+    </div>
+    <!--DevMode End-->
+
+    <!--UseAPI-->
+    <div class="UseAPI-slide bg-success d-flex flex-row align-items-center justify-content-around flex-wrap p-5">
+      <div class="UseAPI-text flex-grow-1">
+        <div class="API-title"><h2 class="fw-bolder">Use the ChatGPT API to develop your own AI.</h2></div><hr class="text-dark">
+        <div class="API-paragraph"><p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quos, error corporis, esse, dolorum vel inventore id nemo quam dolore incidunt eius provident aliquid optio.
+        </p></div>
+      </div>
+      <div class="UseAPI-img flex-grow-1 p-3 bg-light rounded-circle m-5">
+        <img class="w-100" src="./Image/API.png" alt="API">
+      </div>
+    </div>
+    <!--UseAPI End-->
+
+    <!--DownloadApp-->
+    <div class="app bg-secondary d-flex flex-row justify-content-center align-items-center px-4">
+      <div class="app-card w-50 bg-light text-center pt-5 px-3 pb-4 rounded-5">
+        <div class="app-title"><h2 class="fs-1 fw-bolder"><span class="text-success">ChatGPT mobile app</span> is waiting for you. Download Now!</h2></div><hr class="text-black">
+        <div class="app-paragraph">
+          <p class="fs-5">Now you can use ChatGPT on your mobile without having to log in to the site. This program is available for free on Play Store and App Store and you can easily download it from the site.</p>
+        </div>
+        <div class="btn btn-outline-success w-100">Download Now!</div>
+      </div>
+    </div>
+    <!--DownloadApp End-->
+
+  </main>
+
+    <!--Footer-->
+  <footer class="d-flex flex-row align-items-center justify-content-around flex-wrap bg-dark text-light p-5 footer">
+    <nav class="d-flex flex-row flex-grow-1 align-items-center Nav">
+      <ul class="p-0">
+        <li class="fs-4 list-item">Use API</li>
+        <li class="fs-4 list-item">Buy GPT-4</li>
+        <li class="fs-4 list-item">Download App</li>
+        <li class="fs-4 list-item">Report Bug</li>
+        <li class="fs-4 list-item">Blogs</li>
+      </ul>
+      <ul>
+        <li class="fs-4 list-item">Try ChatGPT</li>
+        <li class="fs-4 list-item">Try Dall-E</li>
+        <li class="fs-4 list-item">About Us</li>
+        <li class="fs-4 list-item">Contact Us</li>
+        <li class="fs-4 list-item">Jobs</li>
+      </ul>
+    </nav>
+    <div class="social-medias w-25 text-center flex-grow-1 mt-3">
+      <h4>Our Social Media:</h4><hr class="text-light">
+      <div class="icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" class="m-1" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+          <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" class="m-1" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" class="m-1" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" class="m-1" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" class="m-1" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+  <script src="./JS/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+@font-face {
+  font-family: Vazir;
+  src: url(../Fonts/Vazir.ttf);
+}
+@font-face {
+  font-family:Source Code Pro;
+  src: url(../Fonts/SourceCodePro-ExtraLight.ttf);
+}
+* {
+  font-family: Vazir;
+}
+.code-cmd {
+  background-color: black;
+  transition: 0.5s;
+}
+.code-cmd:hover {
+  background-color: white;
+}
+.code-cmd:hover code {
+  color: #708429;
+  font-weight: bolder !important;
+}
+code {
+  font-family: Source Code Pro ;
+  color: #9dcd00;
+}
+header {
+  background-color: white !important;
+}
+.header-logo {
+  width: 25% !important;
+}
+nav ul li a {
+  color: white !important;
+  text-decoration: none !important;
+}
+nav ul li a:hover {
+  color: #00cc99 !important;
+  text-decoration: underline solid #00cc99 !important;
+}
+nav ul li a:visited {
+  color: #00cc99 !important;
+  text-decoration: none !important;
+}
+nav ul li a:active {
+  color: #00cc99;
+  text-decoration: none;
+}
+.hero {
+  height: 85vh;
+}
+.hero-text {
+  width: 35% !important;
+}
+.text-title {
+  color: #f81ff2 !important;
+  font-size: 4.2rem !important;
+  text-shadow: -1px 2px 0px #6d0b6a !important;
+}
+.text {
+  color: #f81ff2 !important;
+  font-size: 1.25rem !important;
+}
+.hero-img {
+  width: 32% !important;
+}
+hr {
+  color: #f81ff2;
+}
+.title h2 {
+  font-size: 2.6rem ;
+}
+.cards {
+  gap: 45px !important;
+}
+.card {
+  width: 45% !important;
+}
+.card:hover {
+  background-color: #282828;
+  color: white;
+  transition: 0.4s;
+}
+.card:hover .hr {
+  color: white !important;
+}
+.use {
+  color: #00cc99;
+}
+.fast {
+  color: #c81b0b;
+}
+.easy {
+  color: #f8b71f;
+}
+.devmode-slide {
+  height: 85vh !important;
+  gap: 35px !important;
+}
+.dev-title h2 {
+  font-size: 4.3rem !important;
+}
+.dev-paragraph p {
+  font-size: 1.2rem;
+}
+.UseAPI-text {
+  width: 38%;
+}
+.API-title h2 {
+  font-size: 4.3rem;
+}
+.API-paragraph p {
+  font-size: 1.2rem !important;
+}
+.UseAPI-img {
+  width: 7%;
+  box-shadow:12px 14px 0px #1a1a1a;
+  transition: 0.6s;
+}
+.UseAPI-img:hover {
+  box-shadow: none !important;
+  transform: scale(1.1) !important;
+  opacity: 0.9;
+}
+.app {
+  height: 80vh !important;
+}
+footer {
+  height: 60vh !important;
+}
+footer nav ul{
+  list-style-type: none;
+}
+@media only screen and (max-width:425px) {
+  .header-logo {
+    width: 40% !important;
+  }
+  .hero {
+    height: 75vh;
+  }
+  .hero-text {
+    width: 80% !important;
+    text-align: center;
+  }
+  .text-title {
+    font-size: 2.4rem !important;
+  }
+  .cards {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .title {
+    width: 100%;
+  }
+  .title h2 {
+    font-size: 3rem ;
+  }
+  .devmode-slide {
+    padding: 25px 15px !important;
+  }
+  .dev-title h2 {
+    font-size: 2.1rem !important;
+  }
+  .dev-paragraph p {
+    font-size: 1rem !important;
+  }
+  .devmode-text .btn {
+    width: 100%;
+  }
+  .UseAPI-slide {
+    padding: 25px 15px !important;
+  }
+  .API-title h2 {
+    font-size: 2.1rem !important;
+  }
+  .UseAPI-img {
+    width: 70% !important;
+    margin: none !important;
+    box-shadow:6px 5px 0px #1a1a1a;
+  }
+  .app {
+    height: 60vh !important;
+  }
+  .app-card {
+    width: 100% !important;
+    padding: 25px 15px 20px !important;
+  }
+  .app-title h2 {
+    font-size: 1.5rem !important;
+  }
+  .app-paragraph p {
+    font-size: 1rem !important;
+  }
+  .footer {
+    padding: 35px 20px !important;
+  }
+  .list-item {
+    font-size: 1.2rem !important;
+  }
+  .Nav {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width:768px) {
+  .hero-text {
+    width: 80% !important;
+    text-align: center !important;
+  }
+  .UseAPI-img {
+    width: 80% !important;
+    text-align: left;
+  }
+  .app-card {
+    width: 100% !important;
+    padding: 25px 20px !important;
+  }
+  .social-medias {
+    width: 60% !important;
+  }
+  .Nav {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width:1024px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero-text {
+    width: 40%;
+  }
+  .text-title {
+    font-size: 4.2rem;
+  }
+  .hero-img {
+    width: 38% !important;
+  }
+  .API-title h2 {
+    font-size:3.8rem;
+  }
+  .UseAPI-img {
+    width: 40%;
+  }
+  .app-card {
+    padding: 25px 20px !important;
+  }
+}
